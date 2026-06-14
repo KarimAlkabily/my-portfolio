@@ -254,10 +254,10 @@ header.scrolled {
 
 .hero-content {
     position: relative; z-index: 1;
-    display: grid; grid-template-columns: 1fr 1fr;
-    gap: 4rem; align-items: center;
+    display: flex; flex-direction: column;
+    align-items: center; text-align: center;
     padding: 4rem 2rem;
-    max-width: 1200px; margin: 0 auto; width: 100%;
+    max-width: 860px; margin: 0 auto; width: 100%;
 }
 
 .hero-badge {
@@ -279,7 +279,7 @@ header.scrolled {
 
 .hero-title {
     display: flex; flex-direction: column;
-    font-size: clamp(3rem, 7vw, 5.5rem);
+    font-size: clamp(4rem, 10vw, 7rem);
     font-weight: 900;
     line-height: 1;
     letter-spacing: -0.04em;
@@ -293,21 +293,24 @@ header.scrolled {
     color: var(--text-2);
     margin-bottom: 1.5rem;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .role-divider { color: var(--cyan); font-family: var(--mono); }
 
 .hero-desc {
-    font-size: 1.05rem; color: var(--text-2);
-    max-width: 480px; margin-bottom: 2rem; line-height: 1.8;
+    font-size: 1.1rem; color: var(--text-2);
+    max-width: 560px; margin-bottom: 2rem; line-height: 1.8;
 }
 
 .hero-actions {
     display: flex; gap: 1rem;
     margin-bottom: 2rem; flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hero-socials {
     display: flex; gap: 0.75rem;
+    justify-content: center;
 }
 .hero-socials a {
     width: 38px; height: 38px;
@@ -751,11 +754,6 @@ footer {
    Responsive
    ========================================= */
 @media (max-width: 1024px) {
-    .hero-content { grid-template-columns: 1fr; text-align: center; padding: 3rem 2rem; }
-    .hero-desc { max-width: 100%; margin-left: auto; margin-right: auto; }
-    .hero-actions { justify-content: center; }
-    .hero-socials { justify-content: center; }
-    .hero-visual { display: none; }
     .about-grid { grid-template-columns: 1fr; }
     .contact-grid { grid-template-columns: 1fr; }
     .projects-grid { grid-template-columns: 1fr; }
