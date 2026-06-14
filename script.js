@@ -1,25 +1,6 @@
 // =========================================
-// Custom Cursor
+// Custom Cursor - removed
 // =========================================
-const cursor = document.querySelector('.cursor');
-const cursorFollower = document.querySelector('.cursor-follower');
-
-if (window.innerWidth > 768) {
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-        cursorFollower.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
-
-    document.querySelectorAll('a, button, .pill, .project-card, .info-card').forEach(el => {
-        el.addEventListener('mouseenter', () => {
-            cursor.style.transform += ' scale(2)';
-            cursorFollower.style.opacity = '0.5';
-        });
-        el.addEventListener('mouseleave', () => {
-            cursorFollower.style.opacity = '1';
-        });
-    });
-}
 
 // =========================================
 // Mobile Menu

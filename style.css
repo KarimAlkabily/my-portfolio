@@ -58,24 +58,8 @@ img { display: block; max-width: 100%; }
     background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
 }
 
-/* Custom cursor */
-.cursor, .cursor-follower {
-    position: fixed; border-radius: 50%;
-    pointer-events: none; z-index: 9998;
-    transition: opacity 0.3s;
-}
-.cursor {
-    width: 8px; height: 8px;
-    background: var(--cyan);
-    top: -4px; left: -4px;
-    transition: transform 0.1s;
-}
-.cursor-follower {
-    width: 32px; height: 32px;
-    border: 1px solid rgba(56,189,248,0.5);
-    top: -16px; left: -16px;
-    transition: transform 0.15s ease;
-}
+/* Custom cursor - disabled to avoid browser conflicts */
+.cursor, .cursor-follower { display: none; }
 
 /* =========================================
    Layout Utilities
